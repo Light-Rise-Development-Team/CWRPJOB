@@ -1,0 +1,22 @@
+TEAM_CITIZEN = DarkRP.createJob("Citizen", {
+    color = Color(255, 255, 255, 255),
+    model = "models/props_c17/oildrum001.mdl",
+    description = "A regular citizen",
+    weapons = {},
+    command = "citizen",
+    max = 10,
+    salary = 50,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    category = "Citizens",
+    canDemote = false,
+    PlayerSpawn = function(ply)
+        ply:SetHealth(1650)
+        ply:SetMaxHealth(1650)
+        ply:SetArmor(300)
+        ply:SetMaxArmor(300)
+        ply:lscsSetMaxForce(200)
+        ply:lscsSetForce(200)
+    end,
+})
